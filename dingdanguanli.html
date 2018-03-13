@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>曾品有限公司后台管理系统</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">					
+		<link rel="stylesheet" type="text/css" href="css/houtai.css">							
+		<script type="text/javascript"  src="lib/jquery-1.12.4.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="lib/easyui/easyui.css">
+		<link rel="stylesheet" type="text/css" href="lib/easyui/icon.css">
+		<script src="lib/jquery.cookie.js"></script>
+		<script src="lib/easyui/jquery.easyui.min.js"></script>
+		<script src="lib/easyui/easyui-lang-zh_CN.js"></script>
+	</head>
+	<body>
+		<div class="view-top">
+			<img src="imgs/logo_tm.png">
+			<h3>曾品有限公司后台管理系统</h3>
+			<div class="mainfo"></div>
+			<ul>
+			    <li><a href="index.html">回首页</a></li>
+			    <li><a href="#">帮助</a></li>
+			    <li><a href="#">关于</a></li>
+			    <li><a>当前时间</a></li>
+	    	</ul>   
+		</div>
+		
+		<div id="accordion" >
+			<div class="hbox">
+				<h3 class="h"><b b class="bb"></b>&nbsp;产品与服务</h3>			
+				<div class="houbox">
+					<span class="shangpinguanli">商品管理</span>
+					<span class="dingdanguanli">订单管理</span>
+					<span class="pinglunguanli">评论管理</span>
+					<span class="gonggaoguanli">公告管理</span>
+				</div>
+			</div>
+			<div class="hbox">
+				<h3 class="h"><b class="bb"></b>&nbsp;用户中心</h3>
+				<div class="houbox">
+				    <span class="yonghuguanli">用户信息管理</span>
+					<span>实名认证</span>
+					<span>消息中心</span>
+				</div>
+			</div>
+			<div class="hbox">
+				<h3 class="h"><b class="bb"></b>&nbsp;支付管理</h3>
+				<div class="houbox">
+					<span>用户信息管理</span>
+					<span>实名认证</span>
+					<span>消息中心</span>
+				</div>
+			</div>
+		
+		</div>
+			
+		<div id="rightbox">	
+			<div class="list">订单列表</div>					
+			<!--显示商品信息-->
+			<div class="show_product">			
+				<table id="dg" title="用户评论" class="easyui-datagrid" style="width:958px;height:405px;"
+					url="php/getalldingdans.php"	toolbar="#toolbar" rownumbers="true" fitColumns="true" singleSelect="true">
+					<thead>
+						<tr>
+							<th field="ddid" width="50">订单编号</th>
+							<th field="username" width="50">用户名</th>
+							<th field="proname" width="50">商品名</th>
+							<th field="proamount" width="50">商品数量</th>
+							<th field="heji" width="50">小计</th>
+							<th field="shouhuoren" width="50">收货人</th>
+							<th field="shouhuodizhi" width="50">收货地址</th>
+							<th field="dianhua" width="50">联系电话</th>
+							<th field="shouhuotime" width="50">收货时间</th>
+						</tr>
+					</thead>
+				</table>	
+			</div>
+		
+			<div class="list" style="margin-top: 10px;">订单查询</div>	
+			<form method="post" style="margin-top: 10px;">
+				<div class="chaxun">
+					<ul class="ul1">
+						<li>
+							<p style="padding-left: 12px;">订单编号&nbsp;&nbsp;<input type="text" name="text3" id="ddid" value="" placeholder="请输入订单编号"/></p>
+							<p>用户名&nbsp;&nbsp;<input type="text" name="text4" id="username" value="" placeholder="请输入用户名"/></p>
+						</li>
+					</ul>
+				</div>
+				<div class="rsousuo">
+					<a href=""><input type="submit" id="rsearch" value="搜索"></a>
+					<a href=""><input type="reset" id="chongzhi" value="重置"></a>
+				</div>
+			</form>	
+		</div>
+			
+		
+
+		
+		<script>
+			$(function(){
+				$(".hbox").on("click",".h",function(){
+					$(this).siblings(".houbox").show().parent(".hbox").siblings(".hbox").children(".houbox").hide();
+					$(this).children(".bb").css({transform:"rotate(0)"}).parents(".hbox").siblings(".hbox").
+					children(".h").children(".bb").css({transform:"rotate(-90deg)"});
+				})
+				
+				
+				$.cookie.json = true;
+				var user=$.cookie("manager");
+				var html="";	
+				if(user){
+					str="欢迎你："+user[0];
+					$(".mainfo").show().text(str);
+				}
+			})
+								
+				$(".shangpinguanli").click(function(){
+					location="shangpinguanli.html";
+				})
+				$(".pinglunguanli").click(function(){
+					location="pinglunguanli.html";
+				})
+				$(".yonghuguanli").click(function(){
+					location="yonghuguanli.html";
+				})
+				$(".dingdanguanli").click(function(){
+					location="dingdanguanli.html";
+				})
+				$(".gonggaoguanli").click(function(){
+					location="gonggaoguanli.html";
+				})
+				/*搜索订单*/
+				$("#rsearch").on("click",function(e){
+					var istrue=false;
+					e.preventDefault();
+					var _ddid=$("#ddid").val();
+					var _username=$("#username").val();
+//					console.log(_username);
+					if(_ddid){
+						$.ajax({
+							url:"php/searchdingdan.php",
+							type:"post",
+							dataType:"json",
+							data:{
+								ddid:_ddid
+							},
+							success:function(data){			
+								if(data.status==1){
+									var ddids=$(".datagrid-cell-c1-ddid");
+									for(var i=0;i<ddids.length;i++){
+										if(ddids.eq(i).text()==_ddid){										
+											_sid=Number($(".datagrid-btable").find("tbody").children().eq(i-1).find("td").children().text());
+											ddids.eq(i).parent().parent().css("background","red").parents(".datagrid-body").animate({scrollTop:25*(_sid*1)-150},300);
+											istrue=true;
+										}
+									}
+									if(istrue==false){
+										alert("没有你查找的订单");
+									}
+								}
+							}
+						})
+					}
+					else{
+						$.ajax({
+							url:"php/searchdingdan.php",
+							type:"post",
+							dataType:"json",
+							data:{
+								ddid:_ddid,
+								username:_username
+							},
+							success:function(data){
+								console.log(data);
+								if(data.status==1){
+									var usernames=$(".datagrid-cell-c1-username");
+									for(var i=0;i<usernames.length;i++){
+										var index=usernames.eq(i).text().indexOf(_username);
+										if(index!=-1){										
+											_sid=Number($(".datagrid-btable").find("tbody").children().eq(i-1).find("td").children().text());
+											usernames.eq(i).parent().parent().css("background","deepskyblue").parents(".datagrid-body").animate({scrollTop:25*(_sid*1)-150},300);
+											istrue=true;
+										}
+									}
+									if(istrue==false){
+										alert("没有你查找的订单");
+									}
+								}
+							}
+						})	
+					}
+	
+				})
+			
+		
+		</script>
+		
+	</body>
+</html>

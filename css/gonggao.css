@@ -1,0 +1,12 @@
+.gonggaomain{width: 100%;height:800px;padding-top: 50px}
+.gonggaomain .box{width: 1000px;height: 700px;margin: 0 auto;background: #fff;;}
+.gonggaomain .box .biaoti{height:40px;background: #f52648;color: #fff;font-weight: normal;line-height: 40px;font-family: "微软雅黑";text-indent: 20px;font-size: 14px;}          
+.gonggaomain .box .xinxi{width: 100%;height: 600px;overflow: auto;}
+.gonggaomain .box .xinxi .t{width: 100%;height:40px;border-bottom: 1px dashed silver;}
+.gonggaomain .box .xinxi .t .icon{float: left;width: 20px;height: 20px;background: url(../imgs/icon_set.png) no-repeat;background-position: 0 -22px;margin-top: 10px;transform: rotate(90deg);margin-left: 10px;}                   
+.gonggaomain .box .xinxi .neirong{float: left;margin-top:10px;margin-left: 10px;cursor: pointer;}
+.gonggaomain .box .xinxi .time{float:right; margin-top:10px;margin-right: 10px;}
+
+.houtaigonggao{position: absolute;top:38px;left:10px;background: silver;width: 1000px;height:400px;}
+.houtaigonggao .text{width:600px;height:200px;margin: 20px;outline: none;}
+.houtaigonggao .fabu{border: none;background: #f52648;color: #fff;width:100px;height:50px;display:block;margin-top: -74px;margin-left: 634px;}

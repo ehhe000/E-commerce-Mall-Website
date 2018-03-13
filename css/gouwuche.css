@@ -1,0 +1,72 @@
+.cart{width:100%;overflow: hidden;background:#fff;}
+
+.cart_top{width:100%;height:98px;border-bottom: 2px solid #f52648;}
+.cart_top .cart_main{width:1000px;margin: 0 auto;height:100%;}
+.cart_top .cart_main .logo{width:170px;height:90px;float: left;padding-top: 8px;}
+.cart_top .cart_main .logo a{display: block;width: 170px;height:90px;}
+.cart_top .cart_main .cart_step{background: url(../imgs/cart_img1.jpg) no-repeat;background-position: 0 8px;float: right;width: 487px;height: 98px;}
+
+.cart_contain{width:100%;height:auto;}
+.cart_main{width:1000px;height:auto;margin: 0 auto;}
+.cart_main .cart_t{width;100%;height:56px;line-height:56px;font-size: 14px;;}
+.cart_main .cart_t i{width: 11px;height: 15px;display: inline-block;margin: 0 5px;background: url(../imgs/cart_zh1.jpg) no-repeat 0 0;}
+.cart_main .cart_t b{font-weight: bold;color:#f63454;}
+.cart_main .cart_x{width:100%;height:auto;}
+.cart_main .cart_x .tit{width:100%;height:36px;color: #F52648;background: #f9f9f9;border: 1px solid #dfdfdf;border-left: 2px solid #f52648;line-height: 36px;}
+.cart_main .cart_x .tit table{font-size: 14px;width:977px;height:36px;margin:0 10px;border-collapse: collapse;border-spacing: 0;}
+.cart_main .cart_x .tit table th{line-height: 34px;font-weight: normal;}
+.cart_main .cart_x .tit table .td01{width:46%;text-align: left;}
+.cart_main .cart_x .tit table .td02{width:12%;text-align: center;}
+.cart_main .cart_x .tit table .td03{width:15%;text-align: center;}
+.cart_main .cart_x .tit table .td04{width:15%;text-align: center;}
+.cart_main .cart_x .tit table .td05{text-align: center;}
+.cart_main .cart_x .list{width:100%;height:auto;border: 1px solid #dfdfdf;border-top: none;}
+.cart_main .cart_x .list .table_box_tip{padding-top: 10px;}
+.cart_main .cart_x .list .table_box_tip .list_orders{border-top:none;margin-bottom: 5px;width: 98%;margin: 0 auto;}
+.cart_main .cart_x .list table{width: 977px;font-size: 12px;margin-top: -1px;margin-bottom: 20px;}
+.cart_main .cart_x .list table tr{margin-bottom: 10px;}
+.cart_main .cart_x .list table td{height:90px;}
+.cart_main .cart_x .list table .xuan{text-align: center;}
+.cart_main .cart_x .list table .td01{width:46%;text-align: left;}
+.cart_main .cart_x .list table .td01 .pic{float: left;position: relative;margin: 20px 0;}
+.cart_main .cart_x .list table .td01 .fr{float: left;margin-left: 35px;margin-top: 20px;}
+.cart_main .cart_x .list table .td01 .fr .name{width: 240px;height: 40px;line-height: 20px;overflow: hidden;margin-top: 5px;}
+.cart_main .cart_x .list table .td01 .fr .size{width: 240px;height: 20px;line-height: 20px;overflow: hidden;}
+.cart_main .cart_x .list table .td02{width:12%;text-align: center;}
+.cart_main .cart_x .list table .td02 .new_price{display: block;color:#333;}
+.cart_main .cart_x .list table .td02 .yuan{padding: 0 2px;}
+.cart_main .cart_x .list table .td02 .price{font-weight: bold;}
+.cart_main .cart_x .list table .td02 .del_price{display: block;color:#999;}
+.cart_main .cart_x .list table .td02 .del_price .price{text-decoration:line-through;}
+.cart_main .cart_x .list table .td03{width:15%;text-align: center;}
+.cart_main .cart_x .list table .td03 .quantity{position:relative;  padding: 0 23px; width: 28px;height: 22px;border: 1px solid #e3e2e2;border-radius: 2px; margin:0 auto;box-shadow: 0 0px 1px #dfdfdf;}
+.cart_main .cart_x .list table .td03 .quantity .l-y{position: absolute;  top: 0; width: 22px; height: 22px;left: 0;border-right: 1px solid #e3e2e2; font-weight:bold; font-size:18px; line-height:20px; color:#aaa;}
+.cart_main .cart_x .list table .td03 .quantity .tip{ width:28px; border:none; height:20px; line-height:22px; text-align:center;}
+.cart_main .cart_x .list table .td03 .quantity .r-y{ position: absolute;  top: 0; width: 22px; height: 22px;right: 0;border-left: 1px solid #e3e2e2; font-weight:bold; font-size:16px; line-height:20px; color:#aaa;}
+.cart_main .cart_x .list table .td04{width:15%;text-align: center;}
+.cart_main .cart_x .list table .td04{color:#f52648;font-size: 14px;}
+.cart_main .cart_x .list table .td05{text-align: center;}
+.cart_main .cart_j{position: relative; border: 1px solid #ecebeb; margin:20px 0; overflow:hidden; background:#fdfcf8;}
+.cart_main .cart_j .sykj{font-size: 16px;margin:15px 15px 0px 15px ; line-height:22px; height:37px; border-bottom:1px dotted #cccbc6; width:968px; color:#c6c6c6; font-size:14px;}
+.cart_main .cart_j .sykj a{color: #f63353;width:99px; height: 22px; font-weight:bold; margin-right:20px;font-size: 16px;}
+.cart_main .cart_j .sykj a i{width:14px;height:14px;display: inline-block;float: left;margin-right: 12px;margin-top: 5px;background: url(../imgs/cart_zh.jpg) no-repeat 0 -18px;}
+.cart_main .cart_j .sykj b{color:#f52648;margin: 0 5px;}
+.cart_main .cart_j .cart_b{width:100%; overflow:hidden; color:#525252;}
+.cart_main .cart_j .cart_b #amount_cart{width:220px; margin-right:40px; float:right;}
+.cart_main .cart_j .cart_b #amount_cart li{height:40px;line-height:38px;overflow: hidden;}
+.cart_main .cart_j .cart_b #amount_cart li b{color:#f52648;}
+.cart_main .cart_j .cart_b #amount_cart li .fl{float: left;}
+.cart_main .cart_j .cart_b #amount_cart li .fr{float: right;}
+.cart_main .cart_j .cart_b #amount_cart li .fr .yuan{color: #f52648;font-size: 14px;}
+.cart_main .cart_j .cart_b #amount_cart li .fr .price{color: #f52648;font-size: 20px;}
+.cart_main .cart_j .cart_bt{background: #fff;border-top: 1px solid #dfdfdf;width: 100%;overflow: hidden;color: #525252;}
+.cart_main .cart_j .cart_bt ul{width:220px;margin-right: 40px;float: right;}
+.cart_main .cart_j .cart_bt ul li{line-height: 78px;height:78px;}
+.cart_main .cart_j .cart_bt ul li .fl{float: left;}
+.cart_main .cart_j .cart_bt ul li .fr{float: right;}
+.cart_main .cart_j .cart_bt ul li .fr .yuan{color: #f52648;font-size: 16px;}
+.cart_main .cart_j .cart_bt ul li .fr .price{color: #f52648;font-size: 22px;font-weight: bold;}
+.cart_main .cart_j .cart_js{position: relative;height: 48px; background: #f3f3f3;border-top: 1px solid #ecebeb;line-height: 48px;font-size: 14px;}
+.cart_main .cart_j .cart_js .fl{margin-left: 25px;float: left;}
+.cart_main .cart_j .cart_js .fr{margin-left: 25px;float: right;}
+.cart_main .cart_j .cart_js .fr .prelijijiesuan{width:200px; height:48px; float:right; cursor:pointer; background:#f52648; border:none; color:#fff; font-size:16px; }

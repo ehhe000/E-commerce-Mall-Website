@@ -1,0 +1,63 @@
+/*bnner区域*/
+.zbanner{position: relative;width:100%;height:360px;overflow: hidden;}
+.zbanner ul{height:360px;width:100%;}
+.zbanner img{position: absolute;left:-300px;border:0;display: none;}
+.zbanner #c{width:200px;height:30px;position: absolute;bottom: 0;right:300px;cursor: pointer;}
+.zbanner #c p{position:relative;z-index: 200;width:20px;height:20px;border-radius: 20px;background: white;float: left;margin-left: 10px;}
+.zbanner #c .c{background: red;}
+
+
+.zcontent{width:100%;overflow: hidden;}
+/*品牌特卖区域块*/
+.title_1{width:1000px;margin: 0 auto;height:82px;border-bottom: solid 2px #f99c17;}
+.title_1 i{background:url(../imgs/zhenghe2.png); no-repeat;width: 118px;height: 40px;display: inline-block;margin:30px 24px 0 0; background-position: 0 -64px; vertical-align: bottom;}
+.title_1 span{font-size: 18px;color:#999;}
+.title_1 span b{color:red;}
+.title_1 .morebrand{float: right;display: inline-block;margin-top: 58px;color: #999;}
+
+/*爆款尝鲜标题块*/
+.title_2{width:1000px;margin: 0 auto;height:82px;border-bottom: solid 2px #c835bf;}
+.title_2 i{background:url(../imgs/zhenghe2.png); no-repeat;width: 118px;height: 40px;display: inline-block;margin:30px 24px 0 0; background-position: 0 -264px; vertical-align: bottom;}
+
+
+/*品牌热卖图片区域*/
+.content_1{width:1008px;margin: 0 auto;overflow: hidden;}
+.content_1 .brand_item{position: relative;display: inline-block;float: left;width: 492px;height:251px;margin: 10px 6px 10px;}
+.content_1 .brand_item a{display:block;width:100%;height:216px;border-radius: 3px; transition: all 0.4s;overflow: hidden;}
+.content_1 .brand_item a img{width:100%;height:216px;}
+.content_1 .brand_item a:hover{box-shadow: 0 0 10px #999;}
+.content_1 .brand_item a .pms_wrap{position: absolute;bottom: 35px;left: 0;width:100%;background-color: rgba(0, 0, 0, 0.6);}
+.content_1 .brand_item a .pms_wrap p{font-size: 13px;color: #fff;padding-left: 8px;line-height: 32px;}
+.content_1 .brand_item .brand_info{font-size: 14px;color:#4d4d4d;line-height: 21px;padding: 12px 8px 2px;}
+.content_1 .brand_item .brand_info span{color: #F52648;}
+
+/*爆款尝鲜图片区域*/
+.content_2{width:1028px;margin: 0 auto;overflow: hidden;}
+.content_2 .pro_list{position:relative;width:227px;height:338px;margin: 15px;background-color: #fff;box-shadow: 0 0 5px #ccc;overflow: hidden;float: left;display: inline-block;}
+.content_2 .pro_list dl{width:227px;height:334px;}
+.content_2 .pro_list .pro_pic{width:100%;height:253px;overflow: hidden;text-align: center;}
+.content_2 .pro_list .pro_pic a{width:200px;height:253px;}
+.content_2 .pro_list .pro_pic a img{width:200px;height:253px;opacity: 1;transition: 0.2s;}
+.content_2 .pro_list .pro_nam{width:200px;height:36px;line-height: 18px;padding-top: 5px;font-size: 14px;overflow: hidden;margin: 0 auto;}
+.content_2 .pro_list .pro_nam b{font-size:14px;color:#F52648;font-weight: bold;}
+.content_2 .pro_list .pro_nam a{color:#666;}
+.content_2 .pro_list .pro_nam i{color:#F52648;padding-left: 3px;}
+.content_2 .pro_list .pro_pri{width:200px;height:30px;margin: 0 auto;line-height: 30px;padding-top: 8px;}
+.content_2 .pro_list .pro_pri span{color:#666;font-size: 18px;}
+.content_2 .pro_list .pro_pri b{padding-left:5px ;color:#999;text-decoration: line-through;}
+.content_2 .pro_list .pro_pri a{position:absolute;right:8px;bottom:10px;display: block;background: url(../imgs/zhenghe.png) no-repeat;background-position: 0 0;overflow: hidden;margin-top: 10px;color: #fff;line-height: 27px;text-align: center;width:96px;height:28px;opacity: 0;}
+.content_2 .pro_list:hover .pro_pic a img{opacity: 0.3;}
+.content_2 .pro_list:hover .pro_pri a{opacity: 1;}
+
+
+.appdownload{width:100%;height:304px;background: url(../imgs/appdown.png) no-repeat center #f62648;border-top: solid 1px #f66b83;}
+
+/*侧边栏*/
+#scroll{width:50px;height:60px;position: fixed;bottom: 100px;left: 50%;margin-left: 520px;background-color: #fff;border: 1px #ccc solid;cursor: pointer;display: none;}
+#scroll a{display: inline-block;width:27px;height:39px;margin: 12px;background: url(../imgs/zhenghe2.png) no-repeat -229px -243px;}
+#float-left-menu{position:fixed;left:1%;margin-right: 510px;top: 50%;height:170px;width:110px;display: none;}
+#float-left-menu span{display: block;width:67px;height:75px;position: relative;margin-left: 20px;}
+.flm-1{display: block;width:67px;height:75px;cursor: pointer;background:url(../imgs/zhenghe2.png) no-repeat ;background-position: -67px -306px;position: absolute;opacity: 1;z-index: 999;}
+.flm-2{display: block;width:67px;height:75px;cursor: pointer;background:url(../imgs/zhenghe2.png) no-repeat ;background-position: -67px -381px;;position: absolute;opacity: 1;z-index: 999;}
+.flm-11{display: block;width:67px;height:75px;cursor: pointer;background:url(../imgs/zhenghe2.png) no-repeat ;background-position: 0 -306px;position: absolute;opacity:0;z-index: 999;}
+.flm-22{display: block;width:67px;height:75px;cursor: pointer;background:url(../imgs/zhenghe2.png) no-repeat ;background-position: 0 -381px;position: absolute;opacity:0;z-index: 999;}

@@ -1,0 +1,452 @@
+<!DOC0TYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/gouwuche.css" />
+	</head>
+	<body>
+		<!--头部区域-->
+		<div class="zhead-info">
+				<div class="zhead-info-box">
+					<!--zhead左边区域-->
+					<div class="arealeft">
+						<a><i>送货到</i><em  class="area1">北京</em><b></b></a>
+						<div class="areaSell">
+	                		<ul>
+	                			<li><a href="#">湖南</a></li>
+	                			<li><a href="#">湖北</a></li> 
+	                			<li><a href="#">河南</a></li> 
+	                			<li><a href="#">江西</a></li> 
+	                			<li><a href="#">四川</a></li>
+	                			<li><a href="#">贵州</a></li> 
+	                			<li><a href="#">云南</a></li> 
+	                			<li><a href="#">重庆</a></li> 
+	                			<li><a href="#">西藏</a></li> 
+	                			<li><a href="#">广东</a></li> 
+	                			<li><a href="#">广西</a></li> 
+	                			<li><a href="#">海南</a></li> 
+	                			<li><a href="#">北京</a></li> 
+	                			<li><a href="#">河北</a></li> 
+	                			<li><a href="#">内蒙古</a></li> 
+	                			<li><a href="#">山西</a></li>
+	                			<li><a href="#">天津</a></li>
+	                			<li><a href="#">江苏</a></li>
+	                			<li><a href="#">山东</a></li>
+	                			<li><a href="#">上海</a></li>
+	                			<li><a href="#">福建</a></li>
+	                			<li><a href="#">浙江</a></li>
+	                			<li><a href="#">安徽</a></li>
+	                			<li><a href="#">辽宁</a></li>
+	                			<li><a href="#">黑龙江</a></li>
+	                			<li><a href="#">吉林</a></li>
+	                			<li><a href="#">陕西</a></li>
+	                			<li><a href="#">新疆</a></li>
+	                			<li><a href="#">甘肃</a></li>
+	                			<li><a href="#">宁夏</a></li>
+	                			<li><a href="#">青海</a></li>
+	                		</ul>
+            			</div>
+					</div>
+					<!--zhead右边区域-->
+					<div class="arearight">
+						<div class="r1">
+							<p>欢迎来到曾品，请</p>
+							<!--登录链接-->
+							<a class="login" href="login.html">登录</a>
+							<i>&nbsp;|&nbsp;</i>
+							<!--注册链接-->
+							<a class="regist" href="regist.html">免费注册</a>
+						</div>
+						<div class="uinfo" style="display: none;width:184px;float: left;">欢迎您：</div>
+						<a  class="uhshanchu" href="javascript:void(0);" style="display: none;">退出</a>
+						<div class="r2">
+							<!--我的订单-->
+							<p><a href="dingdan.html">我的订单</a><b></b></p>
+							<div>
+								<a href="#">我的钱包</a>
+								<a href="#">我的礼券</a>
+							</div>
+						</div>
+
+						<div class="r3">
+							<p><a href="#">快速导航</a></p>
+						</div>
+						<div class="r4">
+							<p><a href="#">收藏曾品</a></p>
+						</div>
+						<div class="r5">
+							<p><a href="#">手机曾品</a></p>
+						</div>
+		
+					</div>
+				</div>
+		</div>
+		
+		<!--购物车区域-->
+		<div class="cart">
+			<!--购物车顶部-->
+			<div class="cart_top">
+				<div class="cart_main">
+					<div class="logo">
+						<h1><a href="index.html"><img src="imgs/logo_tm.png"/></a></h1>
+					</div>
+					<div class="cart_step"></div>
+				</div>
+			</div>
+			<!--购物车主体-->
+			<div class="cart_contain">
+				<div class="cart_main">
+					
+					<div class="cart_t">
+						<i></i>
+						请在<b id="countDown"></b>内提交订单，下单后您另有30分钟的支付时间
+					</div>			
+					<div class="cart_x">
+						<!--商品信息标题-->
+						<div class="tit">
+							<table>
+								<tbody>
+									<tr>
+										<th class="quanxuan"><input type="checkbox" id="quanbu">全选</th>
+										<th class="td01">商品信息</th>
+										<th class="td02">单价</th>
+										<th class="td03">数量</th>
+										<th class="td04">小计</th>
+										<th class="td05">操作</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--商品信息列表-->
+						<div class="list">
+							<!--要添加进来的区域-->
+							<div class="table_box_tip">
+								<div class="list_orders">
+								</div>
+							</div>
+							<!--商品信息表格-->
+							<!--模板引擎-->
+							<script type="text/html" id="product_template">
+							<% for(var i = 0; i < products.length; i++) { var p = products[i]; %>
+								<table class="prolist" style="height:auto">
+									<tbody>
+										<tr>
+											<td class="proID" style="display: none;"><%=p.id%></td>
+											<td class="xuan"><input type="checkbox" id="check"></th>
+											<td class="td01">
+												<div class="pic"><a href="" ><img id="ggimg" style="border: 1px solid silver;" width="58" height="74" src=<%=p.proimg%> ></a></div>
+												<div class="fr">
+													<div class="name">
+														<a href="" class="gwcbuyname"><%=p.name%></a>
+													</div>
+												</div>
+											</td>
+											<td class="td02">
+												<span class="new_price">
+													<span class="yuan">¥</span>
+													<span class="price" id="ggnprice"><%=p.newprice%></span>
+												</span>
+												<span class="del_price">
+													<span class="yuan">¥</span>
+													<span class="price" id="ggoprice"><%=p.oldprice%></span>
+												</span>
+											</td>
+											<td class="td03">
+												<div class="quantity">
+													<a href="javascript:;" class="l-y">-</a>
+													<input class="tip" type="text" value=<%=p.amount%>>
+													<a href="javascript:;" class="r-y">+</a>
+												</div>
+											</td>
+											<td class="td04">
+												<span class="m-price">
+													<span class="yuan">¥</span>
+													<strong class="price"><%=(p.newprice)*(p.amount)%></strong>
+												</span>
+											</td>
+											<td class="td05">
+												<a href="javascript:;" class="del">删除</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							<% } %>
+							</script>
+						</div>
+					</div>
+					<div class="cart_j">
+						<div class="sykj">
+							<a href="javascript:void(0);" id="couponUpDown">
+								使用卡券<i class="down" id="upDownLi"></i>
+							</a>
+            				已成功使用<b>0</b>张卡券
+            				<input type="button" style="display:none;" value="取消使用" id="cancelUse">
+						</div>
+						<div class="cart_bt">
+							<ul id="totalPayPrice">
+								<li class="ov-pre">
+									<label class="fl">总金额</label>
+									<span class="fr">
+										<span class="yuan">¥</span>
+										<strong class="price">0</strong> 
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="cart_js">
+							<div class="fl">
+								<a href="">继续购物</a>
+							</div>
+							<div class="fr">
+								<input type="button" value="立即结算"  class="prelijijiesuan"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--购物车区域end-->
+		
+			
+		<!--底部区域-->
+		<div class="zfooter-cr">
+			<div class="cr">
+				<div class="ul">
+					<li><a href="">关于曾品</a></li>
+					<li><a href="">免责声明</a></li>
+					<li><a href="">隐私声明</a></li>
+					<li><a href="">版权声明</a></li>
+					<li><a href="">招聘信息</a></li>
+					<li><a href="">联系我们</a></li>
+					<li><a href="">帮助中心</a></li>
+					<li><a href="">友情链接</a></li>
+				</div>
+				<p>Copyright © 2008-2016 Lefeng.com All Rights Reserved. 天津曾品电子商务有限公司 津ICP备15005555号-1  京公网安备11010502014183 营业执照</p>
+				<p>公司全称：天津曾品电子商务有限公司     公司固话：400 000 1818     公司地址：天津市武清区京津电子商务产业园宏瑞道18号</p>
+				<div class="img">
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>	
+				</div>		
+			</div>
+		</div>
+		<!--底部区域end-->
+		
+
+		<script src="lib/jquery-1.12.4.min.js"></script>
+		<script src="js/template-web.js"></script>
+		<script src="lib/jquery.cookie.js"></script>
+		<script>
+	
+		
+
+		/* 页面加载，显示cookie中保存的购物车信息 */
+		$(function(){	
+			/*送货到*/
+			$(".areaSell").on("click","a",function(){
+				$(".area1").text($(this).text());
+			})
+			/*定时器*/
+			var seconds = 1800;
+			var timer = setInterval(function(){
+				seconds--;
+				// 将总秒数格式化为类似 "01:57" 的分钟与秒数显示
+				var second = ("0" + seconds % 60).slice(-2),
+					minute = ("0" + Math.floor(seconds / 60)).slice(-2);
+				$("#countDown").text(minute + "分" + second+"秒");
+				if (seconds <= 0){
+					clearInterval(timer);
+				}
+			}, 1000);
+			
+				       				
+			/*读取用户名*/
+			$.cookie.json = true;
+			var user=$.cookie("users");
+			var html="";	
+			if(user){
+				$(".r1").empty();
+				str="欢迎你："+user[0];
+				$(".uinfo").show().text(str);
+				$(".uhshanchu").show();
+			}
+							
+			$(".uhshanchu").click(function(){
+				$.cookie("users","", {expires:7});
+				$(".uinfo").hide();
+				$(".uhshanchu").hide();
+				$(".r1").show();
+				alert("你已经退出");
+				location="gouwuche.html";
+				
+			})
+			
+			
+			$.cookie.json = true;
+			// 读取cookie中所有的选购商品对象数组结构
+			var _products = $.cookie(user[0]) || [];
+			// 简单判断
+			if (_products.length == 0) {
+				alert("购物车为空");
+					location = "shangpinxinxi.html";
+			}
+			// 显示商品信息
+			var data = {
+				products : _products,
+			};		
+			var html = template("product_template", data);				
+			$(".list_orders").html(html);
+			$("#amount_cart").find("b").text(_products.length);
+
+
+			/*事件委派，删除商品信息*/
+			$(".list_orders").on("click",".del",function(){
+				var row=$(this).parents(".prolist");
+				var _proid=row.find(".proID").text();
+				var index=exists(_products,_proid);
+				if(index !== -1){
+					_products.splice(index, 1);						
+					$.cookie(user[0], _products, {expires:7, path:"/"});					
+					$(this).parents(".prolist").empty();					
+					calcTotal();
+					$.ajax({
+						url : "php/carts.php",
+						data : {
+							action : "delete",
+							pid : _proid
+						}
+					});
+				}
+				
+			});
+			
+			// 查找指定value在数组array中的下标
+			function exists(products, id) {
+				for (var i = 0, len = products.length; i < len; i++) {
+					if(products[i].id == id) // 当前选购商品已存在
+						return i; // 返回当前选购商品在数组中的下标
+				}
+				
+				return -1; // 未选购当前商品
+			}
+			
+			
+			/*点击+，增加商品数量*/
+			$(".prolist").on("click",".r-y",function(){
+				var addtip=$(this).siblings(".tip"),
+					amount=Number(addtip.val())+1,
+					vals=$(this).parent().parent().siblings(".td02").children(".new_price").find(".price").text(),
+					vals=Number(vals),
+					str=amount.toString();
+					addtip.val(str);
+				var money=(amount*vals).toFixed(2);
+				
+				$(this).parent().parent().siblings(".td04").find(".price").text(money);
+				calcTotal();
+//					console.log(typeof val);
+			})
+			
+			$(".quantity").on("click",".l-y",function(){
+				var addtip=$(this).siblings(".tip");
+					amount=Number(addtip.val())-1,
+					vals=$(this).parent().parent().siblings(".td02").children(".new_price").find(".price").text(),
+					vals=Number(vals);
+				if(amount<=1){
+					amount=1;
+				}
+				var str=amount.toString();
+				addtip.val(str);
+				var money=(amount*vals).toFixed(2);
+
+				$(this).parent().parent().siblings(".td04").find(".price").text(money);
+				calcTotal();
+			})
+			
+			
+
+			
+			/*按钮总计*/
+			/* 为页面中已有的复选框(除去全选)绑定点击事件 */
+			var checkboxes = $(".prolist").find("#check");
+			for (var i =0, len = checkboxes.length; i < len; i++) {
+				checkboxes[i].onclick = calcTotal;
+			}
+	        /* 全选 */
+			// 找出全选复选框
+			$(".tit").on("click","#quanbu",function(){
+				// 获取全选复选框的选中状态
+				var status = $(this).is(":checked");
+				// 为每个复选框设置和“全选”一致的选中状态
+				for (var i = 0, len = checkboxes.length; i < len; i++) {
+					checkboxes[i].checked = status;
+				}	
+				// 更新合计金额
+				calcTotal();
+			});
+	        
+			/*合计*/
+	        function calcTotal(){
+	            var total=0;
+	            var rows=$(".prolist").find("#check");
+	         	for(var i=0;i<rows.length;i++){
+	         		
+	                if($(rows[i]).is(":checked")){
+	                	total+=Number($(rows[i]).parents(".prolist").find(".td04 .price").text());
+	                	
+	                }
+	            }
+				$("#totalPayPrice").find("strong").text(total);
+	        }
+	                 
+	        /*立即结算*/
+	       	$(".prelijijiesuan").click(function(){
+	       		var prolist=$(".prolist").find("#check");
+	       		for(var i=0;i<prolist.length;i++){
+	       			
+	       			if($(prolist[i]).is(":checked")){       			
+			       		var pro={
+							id:Number($(prolist[i]).parents(".prolist").find(".proID").text()),
+							name:$(prolist[i]).parents(".prolist").find(".gwcbuyname").text(),
+							newprice:$(prolist[i]).parents(".prolist").find("#ggnprice").text(),
+							oldprice:$(prolist[i]).parents(".prolist").find("#ggoprice").text(),
+							proimg:$(prolist[i]).parents(".prolist").find("#ggimg").attr("src"),
+							amount:Number($(prolist[i]).parents(".prolist").find(".tip").val())	
+						};
+						$.cookie.json = true;
+						var _pros = $.cookie("dd"+user[0]) || [];
+						console.log(_pros);
+						var index = exists(pro.id, _pros);
+						if (index === -1) {// 以前未购买过当前商品
+							// 将当前选购商品添加到数组结构中保存
+							_pros.push(pro);
+							
+						} else {// 以前已经有购买当前商品
+							_pros[index].amount=pro.amount;
+					
+						}
+						
+						$.cookie("dd"+user[0], _pros, {expires:7, path:"/"});
+						function exists(id, products) {
+							for (var i = 0, len = products.length; i < len; i++){
+								if (products[i].id === id)
+									return i;
+							}
+							return -1;
+						}
+						
+	       			}
+	       			
+	       		}
+	       		console.log($.cookie("dd"+user[0]));
+	       		location = "jiesuan.html";
+	       	});
+	
+		});
+
+			
+		</script>
+	</body>
+</html>

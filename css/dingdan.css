@@ -1,0 +1,26 @@
+/*订单区域样式*/
+.maindd{width:100%;padding:8px 0;}
+.dd{width:1000px;margin:0 auto;overflow: hidden;}
+/*左侧菜单栏*/
+.ddside_bar{width:128px;border:1px solid #ddd;border-top:none;float: left;background: #ffffff;box-shadow: 0 0 3px #e8e2d5;}
+.ddside_bar dl{margin-top: 15px;margin-bottom: 10px;}
+.ddside_bar dl dt{font:bold 18px/32px "黑体";height:32px;padding-left: 30px;margin-bottom: 8px;}
+.ddside_bar dl dd a{display: block;padding-left: 30px;height:30px;line-height: 30px;}
+.ddside_bar .dividing-line{border-bottom: 1px dashed #cdcdcd;margin: 0 auto;width: 76%;}
+.ddside_bar a:hover{color:red ;text-decoration: underline;}
+/*右侧内容*/
+.ddcontent{background: #fff;width:860px;float: right;box-shadow: 0 0 3px #e8e2d5;height:500px;padding-bottom:20px ;overflow: auto;}
+.ddcontent .pn-top-nav{padding:0 15px;margin:  0 auto;}
+.ddcontent .pn-top-nav h1{padding: 20px 0;color: #ff0000;overflow: hidden;}
+.ddcontent .pn-top-nav h1 span{font: bold 20px/24px "黑体";float: left;}
+.ddcontent .pn-top-btnbox{background: #f9f9f9;width:100%;height:45px;}
+.ddcontent .pn-top-btnbox a{position:relative;float:left;display:inline-block;color:#666;line-height:50px;height:45px;width:90px; font-size:16px;text-align:center;}
+.ddcontent .pn-top-btnbox .on{font-weight: bold;border-bottom: 2px solid red;box-sizing: border-box;}
+.ddcontent .pn-order{background: #ffffff;}
+.ddcontent .pn-order table {width:100%;border: 1px solid #ebebeb;border-collapse: collapse;border-spacing: 0;color: #666; margin: 10px 0 0 0;}
+.ddcontent .pn-order table th{text-align: center;background: #F9F9F9;color: #676767;border-bottom: 1px solid #e7e7e7;padding: 10px;padding-left: 30px;;}
+.ddcontent .pn-order table .itemwd260{width: 255px;padding-left: 10px;}
+.ddcontent .pn-order table .itemwd70{width: 95px;padding-left: 10px;}
+.ddcontent .pn-order table .itemwd50{width: 80px;padding-left: 10px;}
+.ddcontent .pn-order table .itemwd90{width: 95px;padding-left: 10px;}
+.pn-order td{border-bottom: 1px solid #e7e7e7;    padding: 10px;padding-left: 30px;}

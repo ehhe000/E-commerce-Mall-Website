@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>曾品有限公司后台管理系统</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">					
+		<link rel="stylesheet" type="text/css" href="css/houtai.css">	
+		<link rel="stylesheet" type="text/css" href="css/gonggao.css">	
+		<script type="text/javascript"  src="lib/jquery-1.12.4.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="lib/easyui/easyui.css">
+		<link rel="stylesheet" type="text/css" href="lib/easyui/icon.css">
+		<script src="lib/jquery.cookie.js"></script>
+		<script src="lib/easyui/jquery.easyui.min.js"></script>
+		<script src="lib/easyui/easyui-lang-zh_CN.js"></script>
+	</head>
+	<body>
+		<div class="view-top">
+			<img src="imgs/logo_tm.png">
+			<h3>曾品有限公司后台管理系统</h3>
+			<div class="mainfo"></div>
+			<ul>
+			    <li><a href="index.html">回首页</a></li>
+			    <li><a href="#">帮助</a></li>
+			    <li><a href="#">关于</a></li>
+			    <li><a>当前时间</a></li>
+	    	</ul>   
+		</div>
+		
+		<div id="accordion" >
+			<div class="hbox">
+				<h3 class="h"><b b class="bb"></b>&nbsp;产品与服务</h3>
+				<div class="houbox">
+					<span class="shangpinguanli">商品管理</span>
+					<span class="dingdanguanli">订单管理</span>
+					<span class="pinglunguanli">评论管理</span>
+					<span class="gonggaoguanli">公告管理</span>
+				</div>
+			</div>
+			<div class="hbox">
+				<h3 class="h"><b class="bb"></b>&nbsp;用户中心</h3>
+				<div class="houbox">
+				    <span class="yonghuguanli">用户信息管理</span>
+					<span>实名认证</span>
+					<span>消息中心</span>
+				</div>
+			</div>
+			<div class="hbox">
+				<h3 class="h"><b class="bb"></b>&nbsp;支付管理</h3>
+				<div class="houbox">
+					<span>用户信息管理</span>
+					<span>实名认证</span>
+					<span>消息中心</span>
+				</div>
+			</div>
+		
+		</div>
+		
+		<div id="rightbox">	
+		<div class="list">发布公告</div>	
+		<div class="houtaigonggao">
+			<textarea class="text"></textarea>
+			<input type="button" value="发布" class="fabu"/>
+		</div>
+		</div>
+	
+		
+		<script>
+			$(function(){
+				$(".hbox").on("click",".h",function(){
+					$(this).siblings(".houbox").show().parent(".hbox").siblings(".hbox").children(".houbox").hide();
+					$(this).children(".bb").css({transform:"rotate(0)"}).parents(".hbox").siblings(".hbox").
+					children(".h").children(".bb").css({transform:"rotate(-90deg)"});
+				})
+				
+				
+				$.cookie.json = true;
+				var user=$.cookie("manager");
+				var html="";	
+				if(user){
+			
+					str="欢迎你："+user[0];
+					$(".mainfo").show().text(str);
+				}
+			})
+								
+				$(".shangpinguanli").click(function(){
+					location="shangpinguanli.html";
+				})
+				$(".pinglunguanli").click(function(){
+					location="pinglunguanli.html";
+				})
+				$(".yonghuguanli").click(function(){
+					location="yonghuguanli.html";
+				})
+				$(".dingdanguanli").click(function(){
+					location="dingdanguanli.html";
+				})
+				$(".gonggaoguanli").click(function(){
+					location="gonggaoguanli.html";
+				})
+				
+				/*格式化日期*/
+				function formatDate(date) {
+				var year = date.getFullYear(),
+					month = ("0" + String(date.getMonth() + 1)).slice(-2),
+					day = ("0" + date.getDate()).slice(-2),
+					hour = ("0" + date.getHours()).slice(-2),
+					min = ("0" + date.getMinutes()).slice(-2),
+					sec = ("0" + date.getSeconds()).slice(-2);
+				return year + "-" + month + "-" + day + " " + hour + ":" + min + ":" + sec;
+				}
+				
+				$(".fabu").click(function(){
+					console.log("a");
+					var data=new Date();
+					$.ajax({
+						url:"php/addgonggaos.php",
+						type:"post",
+						dataType:"json",
+						data:{
+							text:$(".text").val(),
+							time:formatDate(data)
+						},
+						success:function(data){
+							/*if(data=="OK"){
+								alert("发布成功");
+							}*/
+							console.log("hha");
+							
+						},
+						error:function(errorMsg){
+							console.log(errorMsg);
+						}
+					})
+				})
+			
+		
+		</script>
+		
+	</body>
+</html>

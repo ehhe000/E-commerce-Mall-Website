@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>确认订单信息</title>
+		<link rel="stylesheet" type="text/css" href="css/jiesuan.css">
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+	</head>
+	<body>
+		
+	<!--头部区域-->
+	<div class="zhead-info">
+		<div class="zhead-info-box">
+			<!--zhead左边区域-->
+			<div class="arealeft">
+				<a><i>送货到</i><em  class="area1">北京</em><b></b></a>
+				<div class="areaSell">
+            		<ul>
+            			<li><a href="#">湖南</a></li>
+            			<li><a href="#">湖北</a></li> 
+            			<li><a href="#">河南</a></li> 
+            			<li><a href="#">江西</a></li> 
+            			<li><a href="#">四川</a></li>
+            			<li><a href="#">贵州</a></li> 
+            			<li><a href="#">云南</a></li> 
+            			<li><a href="#">重庆</a></li> 
+            			<li><a href="#">西藏</a></li> 
+            			<li><a href="#">广东</a></li> 
+            			<li><a href="#">广西</a></li> 
+            			<li><a href="#">海南</a></li> 
+            			<li><a href="#">北京</a></li> 
+            			<li><a href="#">河北</a></li> 
+            			<li><a href="#">内蒙古</a></li> 
+            			<li><a href="#">山西</a></li>
+            			<li><a href="#">天津</a></li>
+            			<li><a href="#">江苏</a></li>
+            			<li><a href="#">山东</a></li>
+            			<li><a href="#">上海</a></li>
+            			<li><a href="#">福建</a></li>
+            			<li><a href="#">浙江</a></li>
+            			<li><a href="#">安徽</a></li>
+            			<li><a href="#">辽宁</a></li>
+            			<li><a href="#">黑龙江</a></li>
+            			<li><a href="#">吉林</a></li>
+            			<li><a href="#">陕西</a></li>
+            			<li><a href="#">新疆</a></li>
+            			<li><a href="#">甘肃</a></li>
+            			<li><a href="#">宁夏</a></li>
+            			<li><a href="#">青海</a></li>
+            		</ul>
+    			</div>
+			</div>
+			<!--zhead右边区域-->
+			<div class="arearight">
+				<div class="r1">
+					<p>欢迎来到曾品，请</p>
+					<!--登录链接-->
+					<a class="login" href="login.html">登录</a>
+					<i>&nbsp;|&nbsp;</i>
+					<!--注册链接-->
+					<a class="regist" href="regist.html">免费注册</a>
+				</div>
+				<div class="uinfo" style="display: none;width:184px;float: left;">欢迎您：</div>
+				<a  class="uhshanchu" href="javascript:void(0);" style="display: none;">退出</a>
+				<div class="r2">
+					<!--我的订单-->
+					<p><a href="dingdan.html">我的订单</a><b></b></p>
+					<div>
+						<a href="#">我的钱包</a>
+						<a href="#">我的礼券</a>
+					</div>
+				</div>
+				<div class="r3">
+					<p><a href="#">快速导航</a></p>
+				</div>
+				<div class="r4">
+					<p><a href="#">收藏曾品</a></p>
+				</div>
+				<div class="r5">
+					<p><a href="#">手机曾品</a></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<!--购买主体-->
+	<div class="jiesuan">
+		<!--购买顶部-->
+		<div class="jiesuan_top">
+			<div class="jiesuan_main">
+				<div class="logo">
+					<h1><a href="index.html"><img src="imgs/logo_tm.png"/></a></h1>
+				</div>
+				<div class="jiesuan_step"></div>
+				
+			</div>
+		</div>
+		<!--订单主体-->
+		<div class="jiesuan_contain">
+			<div class="jiesuan_main">
+				<div class="jiesuan_t">
+					<i></i>
+					请在<b id="countDown"></b>内提交订单，下单后您另有30分钟的支付时间
+				</div>
+				<div class="jiesuan_x">
+					<div class="tit"><span>收货信息</span></div>
+					<div class="shouhuo">
+						<div class="dizhixinxi">
+							<ul>
+        						<li class="li01">
+            						<span class="jiesuanyonghu">王婷</span>
+        						</li>
+        						<li class="li02">四川省 成都市 武侯区 跳伞塔街道科院街6号</li>
+        						<li class="li03">152*****940</li>
+        						<li class="li04">周六日及节假日收货</li>
+    						</ul>
+    						<a class="shdzxg" href="javascript:void(0);">修改</a>
+						</div>
+					</div>
+					<div class="more-address">
+       		 			<a href="javascript:void(0);" class="hui">显示全部收货地址</a>
+            			<a href="#" class="cf_addr_new">添加新地址</a>
+					</div>
+				</div>
+				<div class="jiesuan_y">
+					<div class="tit"><span>支付方式</span>*推荐使用在线支付，更方便快捷</div>
+					<div class="zhifufangshi">
+						<div class="box">
+        					<input id="bank" type="radio" checked="checked"><font>在线支付</font>提交订单后选择
+    					</div>
+    				</div>	
+				</div>
+				<div class="jiesuan_z">
+					<div class="tit"><span>订单商品信息</span></div>
+					<div class="jiesuanbiaoge">
+						<table>
+				            <tbody class="jiesuanxinxi">
+				            	<tr>
+					                <th class="th01"><span>商品信息</span></th>
+					                <th class="th02">单价</th>
+					                <th class="th03">数量</th>
+					                <th class="th04">小计</th>
+				            	</tr>
+				            	
+				                <script type="text/html" id="product_template">
+									<% for(var i = 0; i < products.length; i++) { var p = products[i]; %>
+					                	<tr class="jiesuanshangpin">
+						                <td>
+						                    <strong>
+						                        <a href="javascript:void(0)">
+						                            <img class="shangpintupian" width="58" height="74" src=<%=p.proimg%>>
+						                        </a>
+						                    </strong>
+						                    <p class="name"><a href="" class="shangpinming"><%=p.name%></a></p>
+						                </td>
+						                <td>¥ <%=p.newprice%></td>
+						                <td class="shangpinshuliang"><%=p.amount%></td>
+						                <td>¥<i  class="jiesuanheji"><%=p.amount*p.newprice%></i></td>
+					            		</tr>
+				            		<% } %>
+								</script>
+								
+				            </tbody>
+						</table>
+						<p>
+				           <label class="yunfei">运费：免运费&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				           	本订单金额： <span class="u-yen" style="display:inline-block;width:30px">¥<i class="zongjine" style="display:inline-block;width:20px;height:20px"></i></span>
+				           <strong class="js-u-price"></strong>
+				        </p>
+					</div>				
+				</div>
+				<div class="jiesuan_w">
+					<div class="box-t">
+        				<ul>
+			                <li><span class="cf_addr_show">收货信息： 王婷.152*****940.四川省.成都市.武侯区.跳伞塔街道.收货时间周六日、节假日</span></li>
+			                <li class="xuxian"><span class="cf_payment_type">支付方式： 在线支付</span></li>
+        				</ul>
+        				<p class="cf_timeout_text">请在 <b class="cf_left_min">06分54秒</b> 内提交订单</p>
+   		 			</div>
+					<div class="box-r">
+						<ul>
+							<li><i>商品金额</i><em class="zongjine"></em></li>
+							<li><i>乐蜂发货，运费</i><em>¥0</em></li>
+							<li><i>活动优惠</i><em>¥0</em></li>
+							<li><i>卡卷优惠</i><em>¥0</em></li>
+							<li class="daizhifu"><i>待支付</i><em><i style="display:inline-block;width:20px;height:20px;margin-left: 20px;">¥</i><i class="zongjine" style="display:inline-block;width:20px;height:20px"></i></em></li>
+							<li class="tijiaodingdan"><input type="button" value="提交订单" class="dingdantijiao"></li>
+						</ul>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+	
+	
+	<!--底部区域-->
+	<div class="zfooter-cr" style="background: #fff;">
+		<div class="cr">
+			<div class="ul">
+				<li><a href="">关于曾品</a></li>
+				<li><a href="">免责声明</a></li>
+				<li><a href="">隐私声明</a></li>
+				<li><a href="">版权声明</a></li>
+				<li><a href="">招聘信息</a></li>
+				<li><a href="">联系我们</a></li>
+				<li><a href="">帮助中心</a></li>
+				<li><a href="">友情链接</a></li>
+			</div>
+			<p>Copyright © 2008-2016 Lefeng.com All Rights Reserved. 天津曾品电子商务有限公司 津ICP备15005555号-1  京公网安备11010502014183 营业执照</p>
+			<p>公司全称：天津曾品电子商务有限公司     公司固话：400 000 1818     公司地址：天津市武清区京津电子商务产业园宏瑞道18号</p>
+			<div class="img">
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>	
+			</div>		
+		</div>
+	</div>
+	<!--底部区域end-->
+
+	<!--收货地址-->
+	<div class="shdz">
+		<h3>编辑&nbsp;&nbsp;收货地址</h3>
+		<ul>
+			<li><span><b>*</b>收货人：</span><input type="text" value="" id="shdzyh"/></li>
+			<li><span><b>*</b>收货人身份证号：</span><input type="text" value="" id="shdzsfz"/></li>
+			<li class="shdzjl"><span><b>*</b>收货地址：</span>
+				<select id="province" style="width: 100px;"></select>
+				<select id="city" style="width: 100px;"></select>
+				<select id="district" style="width: 100px;"></select>
+			</li>
+
+			<li><span><b>*</b>详细地址：</span><input type="text" value="" id="shdzxx"/></li>
+			<li><span><b>*</b>联系电话：</span><input type="text" value="" id="shdzdh"/></li>
+			<li><span><b>*</b>收货时间：</span>
+				<select style="width:200px;height: 22px;" id="shsj">
+                    <option value="ANYTIME">收货时间不限</option>
+                    <option value="WORKDAYS">工作日收货</option>
+                    <option value="WEEKENDS" selected="selected">周六日及节假日收货</option>
+               </select>
+			</li>
+			<div class="shdzbt">保存</div>
+		</ul>
+		
+	</div>
+		
+	<div class="zzc"></div>
+	
+
+	<script src="lib/jquery-1.12.4.min.js"></script>
+	<script src="js/template-web.js"></script>
+	<script src="lib/jquery.cookie.js"></script>
+	
+	<script>
+		/* 页面加载，显示cookie中保存的购物车信息 */
+		$(function(){
+									
+			/*送货到*/
+			$(".areaSell").on("click","a",function(){
+				$(".area1").text($(this).text());
+			})
+			/*定时器*/
+			var seconds = 1800;
+			var timer = setInterval(function(){
+				seconds--;
+				// 将总秒数格式化为类似 "01:57" 的分钟与秒数显示
+				var second = ("0" + seconds % 60).slice(-2),
+					minute = ("0" + Math.floor(seconds / 60)).slice(-2);
+				$("#countDown").text(minute + "分" + second+"秒");
+				$(".cf_left_min").text(minute + "分" + second+"秒");
+				
+				if (seconds <= 0){
+					clearInterval(timer);
+				}
+			}, 1000);
+			
+			
+			/*读取用户名*/
+			$.cookie.json = true;
+			var user=$.cookie("users");
+			var html="";	
+			if(user){
+				$(".r1").empty();
+				str="欢迎你："+user[0];
+				$(".uinfo").show().text(str);
+				$(".uhshanchu").show();
+
+			}
+							
+			$(".uhshanchu").click(function(){
+				$.cookie("users","", {expires:7});
+				$(".uinfo").hide();
+				$(".uhshanchu").hide();
+				$(".r1").show();
+				alert("你已经退出");
+				location="jiesuan.html";
+				
+			})
+			
+			
+			$.cookie.json = true;
+			// 读取cookie中所有的选购商品对象数组结构
+			var _pros= $.cookie("dd"+user[0]) || [];
+//			console.log(_pros);
+			// 简单判断
+			if (_pros.length == 0) {
+				alert("无购买商品信息");
+					location = "shangpinxinxi.html";
+			}
+			// 显示商品信息
+			var data = {
+				products : _pros,
+			};		
+			var html = template("product_template", data);				
+			$(".jiesuanxinxi").append(html);
+//			
+			/*计算合计*/
+			var hejires=0;
+			var hejis=$(".jiesuanshangpin").find(".jiesuanheji");
+			for(var i=0;i<=hejis.length;i++){
+				hejires+=Number($(hejis[i]).text());
+			}
+			$(".zongjine").text(hejires);
+			
+						
+			
+			
+			/*修改收货地址*/
+			$(".shdzxg").click(function(){
+				$(".shdz").show();
+				$(".zzc").show();
+			})
+			$(".cf_addr_new").click(function(){
+				$(".shdz").show();
+				$(".zzc").show();
+			})
+			
+			/*三级级联*/
+			var address = {};	
+			$.ajax("data/addresses.json").done(function(data){
+				bindData(data);
+			}).done(function(){
+				initProvince();
+			});
+
+			function bindData(data) {
+				data.regions.forEach(function(province){
+					// 创建当前遍历省份所表示的对象
+					address[province.name] = {};
+					if (!province.regions)
+						return;
+					province.regions.forEach(function(city){
+						address[province.name][city.name] = city.regions;
+					});
+				});
+			}
+
+			// 初始化省份信息
+			function initProvince() {
+				var html = "";
+				for (var provinceName in address) {
+					html += "<option value='"+ provinceName +"'>"+ provinceName +"</option>";
+				}
+				$("#province").append(html);
+
+				// 加载城市
+				initCity();
+			}
+
+			// 初始化城市信息
+			function initCity() {
+				// 获取省份选中的值
+				var _province = $("#province").val();
+				// 获取选中省份的城市信息
+				var cities = address[_province];
+				// 遍历
+				var html = "";
+				for (var cityName in cities) {
+					html += "<option value='"+ cityName +"'>"+ cityName +"</option>";
+				}
+				// 显示
+				$("#city").empty().append(html);
+
+				initDistrict();
+			}
+
+			// 初始化区县信息
+			function initDistrict() {
+				// 获取省市选择项
+				var _province = $("#province").val(),
+					_city = $("#city").val();
+				// 获取选中省市中的区县信息
+				var _districts = address[_province][_city];
+				// 遍历每个区县信息
+				var html = "";
+				_districts.forEach(function(district){
+					html += "<option value='"+ district.name +"'>"+ district.name +"</option>";
+				});
+				// 显示
+				$("#district").empty().append(html);
+			}
+
+			// 省份选择项发生改变，重新加载城市
+			$("#province").on("change", initCity);
+			// 城市选择项发生改变，重新加载区县
+			$("#city").on("change", initDistrict);
+			
+			
+			
+			
+			/*保存修改的信息*/
+			$(".shdzbt").click(function(){
+				var shouhuoren=$("#shdzyh").val();//修改收货人
+				$(".jiesuanyonghu").text(shouhuoren);
+				var shouhuodizhi=""+$("#province").val()+"  "+$("#city").val()+"  "+$("#district").val()+"  "+$("#shdzxx").val();  //修改收货地址              
+				$(".li02").text(shouhuodizhi);
+				var lianxidianhua=$("#shdzdh").val();//修改联系电话
+				$(".li03").text(lianxidianhua);
+			/*	var shouhuoshijian=$("#shsj").text();//修改收货时间
+				$(".li04").text(shouhuoshijian);*/
+				$(".shdz").hide();
+				$(".zzc").hide();
+			})
+			
+			$(".dingdantijiao").click(function(){
+				var rows=$(".jiesuanshangpin");
+				for(var i=0;i<rows.length;i++){
+					$.ajax({
+						url:"php/adddingdans.php",
+						type:"post",	
+						data:{
+							username:user[0],
+							shouhuoren: $(".jiesuanyonghu").text(),
+							shouhuodizhi: $(".li02").text(),
+							dianhua: parseInt($(".li03").text()),
+							shouhuotime: $(".li04").text(),
+							proname: $(rows[i]).find(".shangpinming").text(),
+							proamount: Number($(rows[i]).find(".shangpinshuliang").text()),
+							heji: Number($(rows[i]).find(".jiesuanheji").text())
+						},
+						success:function(data){
+							location="dingdan.html"
+						}
+						
+					});
+				}
+				alert("订单提交成功");
+			})
+		});
+	</script>
+	
+	
+	</body>
+</html>

@@ -1,0 +1,97 @@
+﻿/*商品信息区域*/
+.main{width:100%;height:auto;}
+.mainbox{width:1000px;height:1773px;margin: 0 auto;}
+/*顶部*/
+.cont{width:1000px;height:auto;}
+.cont .brandpath{padding: 7px 0px;height:30px;}
+.cont .brandpath .all{display:inline;float: left;color: #333;line-height: 24px;margin: 1px 0px 0px;}
+.cont .brandpath .curpath{line-height: 24px;margin: 1px 0 0;float: left;}
+.cont .oper_more_cnt{position:relative;overflow: hidden;width: 100%;border-width: 1px 1px 3px;border-style: solid; margin-top:-2px; margin-bottom:10px; 
+background:#fff; border-color: #E8E4E5 #E8E4E5 #F3F1F2;border-image: none;background-color: #FFF;}
+.cont .oper_more_cnt li{position: relative;border-bottom: 1px solid #eceae6;overflow: hidden;width: 100%;}
+.cont .oper_more_cnt ul li b{float: left;width: 70px;text-align: center;color: #999;overflow: hidden; font-weight: bold; display: inline-block;line-height: 53px;}
+.cont .oper_more_cnt ul .show_brand{height:90px;}
+.cont .oper_more_cnt ul .show_brand .more{position: absolute;top: 34px;right: 92px;width: 36px;height: 22px;line-height: 22px; color: #ca8516;cursor: pointer;overflow: hidden;}
+.cont .oper_more_cnt ul .show_brand .more .lf-icon-down{background: url(../imgs/zhenghe.png) no-repeat;background-position: -113px 0;width: 8px;height: 4px;display: inline-block;float: right;margin: 8px 0px 0px;}
+.cont .oper_more_cnt ul .show_brand .hide{position:absolute;top:34px;right:92px;width:36px;height:22px; line-height:22px;color:#ca8516;cursor:pointer;overflow:hidden;}
+.cont .oper_more_cnt ul .show_brand .hide .lf-icon-up{background: url(../imgs/zhenghe.png) no-repeat;background-position: -105px 0;width: 8px;height: 4px;display: inline-block;float: right;margin: 8px 0px 0px;}
+.cont .oper_more_cnt ul .show_brand .cat-more-add{position: absolute;top: 34px;right: 16px;  cursor: pointer;overflow: hidden;display: inline-block;}
+.cont .oper_more_cnt ul .show_brand .cat-more-add .lf-icon-btn-mselect{background: url(../imgs/zhenghe.png) no-repeat;background-position: -150px -54px; display: inline-block;width:52px;height:22px;}
+.cont .oper_more_cnt ul .show_brand .brand{margin-left:100px;width:760px;height:48px;left: 100px;margin-top:14px ;overflow:auto;transition: all 2s;}
+.cont .oper_more_cnt ul .show_brand .brand a{display: block;float: left;width: 98px;height:48px;border: 1px solid #E8E4E5;margin: 0px -1px -1px 0px;}
+.cont .oper_more_cnt ul .show_brand .brand a img{border: 0;width:98px;height:48px;}
+.cont .oper_more_cnt ul .mod{float: left;width:855px;padding: 13px 24px;}
+.cont .oper_more_cnt ul .mod a{display: block;float: left;width:96px;height:28px;line-height: 28px;margin: 0px 25px 0px 5px;}
+.cont .oper_more_cnt ul .mod a i{color: #999;}
+/*查询条件*/
+.cloth_list{width:998px;height: 38px;line-height: 38px;margin: 17px 0 21px;color: #000;border: 1px solid #E5E5E5;background-color: #FAFAFA;box-shadow: 0px 0px 3px #E4E3E5;}
+.cloth_list .order-1{float: left;cursor: pointer;color: #fff;background: #F72548;height: 37px;padding: 0 20px;line-height: 37px;}
+.cloth_list .order-2{float: left;cursor: pointer;height: 37px;padding: 0 20px;line-height: 37px;}
+.cloth_list .order-2 i{background: url(../imgs/zhenghe.png) no-repeat;background-position: -113px 0;display: inline-block;width: 8px;height: 4px;margin-left: 10px;vertical-align: middle;}
+.cloth_list .order-3{float: left;cursor: pointer;height: 37px;padding: 0 20px;line-height: 37px;}
+.cloth_list .order-3 i{background: url(../imgs/zhenghe.png) no-repeat;background-position: -113px 0;display: inline-block;width: 8px;height: 4px;margin-left: 10px;vertical-align: middle;}
+.cloth_list .tpages{width:180px;height:39px;line-height: 37px;float: right;margin-right: 10px;}
+.cloth_list .tpages .tpageNum{float: left;color: #999;}
+.cloth_list .tpages .tpageNum i{color: #e8254a;}
+.cloth_list .tpages .tpageNum em{padding-left: 20px;font-size: 14px;}
+.cloth_list .tpages .tpageNum .tprev{float: right;color: #999;width: 16px;height: 16px;background: url(../imgs/zhenghe.png) no-repeat;background-position: -143px -38px;margin: 11px 0 0 10px;cursor: pointer;}
+.cloth_list .tpages .tpageNum .tnext{float: right;color: #999;width: 16px;height: 16px;background: url(../imgs/zhenghe.png) no-repeat;background-position: -112px -38px;margin: 11px 0 0 4px;cursor: pointer;}
+/*商品信息*/
+.mainbody{overflow: hidden;}
+.mainbody .pruwrap{float: left;margin: 8px 8px 8px 0;background: #fff;border-radius: 3px;border: 1px solid #fff;transition: all 0.2s;width: 244px;height: 420px;}
+.mainbody .pruwrap dl{width:242px;height:411px;}
+.mainbody .pruwrap dl img{height: 270px;width: 214px;display: block;margin: 15px;margin-bottom: 10px;}
+.mainbody .pruwrap .nam{height: 36px;line-height: 18px;padding: 0 21px;margin-bottom: 5px;color: #333;}
+.mainbody .pruwrap .pri{padding-left: 21px;margin-top: 10px;}
+.mainbody .pruwrap .pri .price-tag{color:#f52648;font-size: 14px;}
+.mainbody .pruwrap .pri .newprice{color: #f52648;font-size: 20px;}
+.mainbody .pruwrap .pri b{display: inline-block;padding: 0 2px;font-size: 14px;color: #f52648;font-weight: bold;}
+.mainbody .pruwrap .pri .delprice{font: normal 12px/16px arial;color: #999;margin: 11px 0px 0px 5px;text-decoration: line-through;}
+.mainbody .pruwrap .pri .add-to-cart{width: 96px;height: 28px;display: block;line-height: 27px;text-align: center;color: #fff;margin-top: 10px;background: url(../imgs/zhenghe.png) no-repeat;background-position: 0 0;}
+.pruwrap:hover {box-shadow: 0 4px 10px rgba(0,0,0,.1); border:1px solid #ffa2b1; background: #fff}  
+
+.prev-next{width:100%;height:38px;padding: 20px 0;}
+.prev-next .prev-nextbox{height:100%;width:200px;float: right;}
+.prev-next a{display: block;width:33px;height:30px;padding:0 2px;line-height:30px;color: #999;text-align: center; color: #999;float: left;border: solid 1px #d4d4d4;border-radius: 2px;background: #fff;margin-left: 10px;cursor: pointer;}
+.prev-next a:hover{box-shadow: 0 4px 10px rgba(0,0,0,.1); border:1px solid #ffa2b1; }
+
+
+.addsuccess{position:fixed;z-index: 900;width:508px;padding: 50px 10px 50px;background: #fff;border:1px solid orangered;border-radius: 10px;left: 50%;top:50%;margin-left:-264px;margin-top:-125px;display: none;}
+.addsuccess .sum{padding: 10px 0 0 150px;}
+.addsuccess .sum h3{font-size: 22px;line-height: 35px;color: #333;font-weight: normal;}
+.addsuccess .sum span{background: url(../imgs/addsuccess.gif) no-repeat;position: absolute;top: 61px;left: 115px;width: 37px;height: 35px;display: inline-block;margin-right: 40px;}
+.addsuccess .sum p{line-height:45px ;margin-top: 20px;}
+.addsuccess .sum .pay{background: url(../imgs/qujiesuan.png) no-repeat; margin: 2px 15px 5px 0;overflow: hidden;display: inline-block;width:110px;height:40px;}
+.addsuccess .sum .jixugouwu{display: inline-block; margin: -40px 15px 5px 0;vertical-align:middle;color:  #ca8516;}
+.addsuccess .sum .chakangouwuche{display: inline-block;margin: -40px 15px 5px 0;vertical-align:middle;color: red;}
+.addsuccess .succ-close{background:url(../imgs/chacha.png) no-repeat;position: absolute;display:block;top: 10px;right: 10px;width: 15px;height:15px;color:silver;}
+
+/*登录*/
+.loginContent{position:fixed;z-index:200;left: 50%;top:50%;margin-left:-210px;margin-top:-310px;width:420px;height:548px;border-radius: 8px;box-shadow: #ccc 0px 0px 5px;background: #fff;display: none;}
+.loginTitle{height:40px;padding: 25px 60px 0 60px;margin-bottom: 20px;background: #f52648;}
+.loginTitle .ltl{display:block;font-size:16px;width:100px;height:36px;float: left;line-height: 26px;color: white;}
+.loginTitle .ltr{display:block;float: right;font-size:14px;}
+.loginTitle .ltr a{line-height: 28px;color:white;}
+
+.loginInput{margin-top: 35px;padding:0 60px;height:501px;}
+.loginInput li{height:110px;width:300px;}
+.loginInput li h2{font-weight: 500;line-height: 24px;font-size: 12px;}
+.loginInput li input{width:278px;height: 33px;border: 1px solid #ccc;font-size: 12px;font-weight: bold;color: #666;padding: 0 10px;outline: none;border-radius: 3px;}
+.loginInput .mailwrap{position: relative;}
+.loginInput .pwwrap{height:95px;position: relative;}
+.loginInput .pwwrap .newsTips{position: absolute;line-height: 24px;color: #999;top: 0;right: 0;}
+.loginInput .pwwrap .newsTips a{color: #02b1cb;}
+.loginInput .yzmwrap input{width: 125px;}
+.loginInput .yzmwrap span{display: inline-block;height:42px;width:139px;vertical-align: top;}
+.loginInput .yzmwrap span a{width:40px;height:40px;color:#a0a0a0;display: inline-block;margin-left: 4px;vertical-align: top;}
+.loginInput .buttonwrap{margin:15px 0 15px 0;height: 40px;}
+.loginInput .buttonwrap a{display: block;width: 300px;height: 40px;text-align: center;font-weight: bold;font-size: 14px;line-height: 38px;color: #fff;word-spacing: 8px;letter-spacing: 10px;background: url(../imgs/zhenghe4.png) no-repeat 0 -262px;}
+.loginInput .partners{padding: 30px 0 0 0;margin: 20px 0 0 0;border-top: 1px solid #eceae6;height: auto;}
+.loginInput .partners span{color: #666;line-height: 50px;display: block;float: left;width: 80px;}
+.loginInput .partners span i{display: inline-block;height: 24px;width: 24px;vertical-align: middle;background: url(../imgs/zhenghe4.png) no-repeat;}
+.loginInput .partners .par-1{width: 150px;}
+.loginInput .partners .par-1 i{background-position: -303px bottom;width: 26px;}
+.loginInput .partners .par-2{width: 59px;}
+.loginInput .partners .par-2 i{background-position: 0 bottom;margin-right: 5px;}
+.loginInput .partners .par-3{width: 150px;}
+.loginInput .partners .par-3 i{background-position: -120px bottom;}
